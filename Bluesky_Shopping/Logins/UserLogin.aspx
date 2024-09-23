@@ -17,19 +17,26 @@
     <link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
     <link href="//fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
   <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 205px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bg agileinfo">
-    <h1 class="agile_head text-center">Bluesky Shopping</h1>
-    <h2 class="agile_head text-center">User Login </h2>
+    <asp:Image ID="Image1" runat="server" ImageUrl="~/Logins/images/BlueSky logo 4.png.svg" />
+    <h1 class="agile_head text-center">Bluesky Shopping <i class="fa fa-shopping-bag" aria-hidden="true"></i></h1>
     <form runat="server" class="agile_form">
+    <h2 class="agile_head text-center">  <asp:LinkButton ID="LinkButton1" runat="server" CssClass=" hoveref1" Style="color:red" OnClick="LinkButton1_Click" >User Login</asp:LinkButton> | <asp:LinkButton ID="LinkButton2" runat="server" CssClass="hoveref1">Shop Login</asp:LinkButton> </h2>
 
         <div class="w3layouts_main wrap">
             <!--Horizontal Tab-->
             <div id="parentHorizontalTab_agile">
                 <ul class="resp-tabs-list hor_1">
-                    <li>LogIn</li>
-                    <li>SignUp</li>
+                    <li id="login-tab">LogIn</li>
+                    <li id="signup-tab">SignUp</li>
                 </ul>
 
 
@@ -37,14 +44,14 @@
                     <%--<div class="w3_agile_login">--%>
                     <div class="agile_its_registration">
 
-                        
-                        <table >
+
+                        <table class="">
                             <tr>
                                 <td>
                                     <p>Email</p>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="TextBox1" runat="server" Placeholder="Enter Your Email ID" required="required"></asp:TextBox>
+                                    <asp:TextBox ID="TextBox1" runat="server" TextMode="Email" Placeholder="Enter Your Email ID" required="required"></asp:TextBox>
                                 </td>
                             </tr>
 
@@ -53,88 +60,117 @@
                                     <p>Password</p>
                                 </td>
                                 <td>
-                                    <asp:TextBox ID="TextBox2" runat="server" Placeholder="Enter Your Password" required="required"></asp:TextBox>
+                                    <asp:TextBox ID="TextBox2" TextMode="Password" runat="server" Placeholder="Enter Your Password" required="required"></asp:TextBox>
                                 </td>
-
                             </tr>
                         </table>
                         <div class="check">
-                            <div class="checkbox w3l">
-                                <asp:CheckBox ID="CheckBox1" runat="server" />
-                                <i></i>I accept the terms and conditions
-                            </div>
+                                <asp:CheckBox ID="CheckBox1" runat="server" />  I accept the terms and conditions
                         </div>
-                        <asp:Button ID="Button1" runat="server" Text="LogIn" class="agileinfo" />
+
+                        <asp:LinkButton ID="LinkButton3" runat="server" OnClick="LinkButton3_Click1">LinkButton</asp:LinkButton>
+              
+                        <asp:Button ID="Button1" runat="server" Text="LogIn" OnClick="LinkButton3_Click" />
                         <div class="login_w3ls">
-                            <a href="#">Forgot Password</a>
+                            <a "javascript:void(0);" onclick="switchToSignUp()" class="">create New Account</a>
                         </div>
                     </div>
 
+                    <%--registration table startsss--%>
 
-                    <div class="agile_its_registration">
+                    <div class="agile_its_registration" id="reg">
                         <table>
                             <tr>
                                 <td>
                                     <p>First Name</p>
                                 </td>
-                                <td>
-                                    <asp:TextBox ID="TextBox3" runat="server" Placeholder="Enter Your First Name" required="required"></asp:TextBox>
+                                <td class="auto-style1">
+                                    <asp:TextBox ID="TextBox3" runat="server" Placeholder="Enter Your First Name"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+                                        ControlToValidate="TextBox3" ErrorMessage="First Name is required" ForeColor="Red">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <p>Last Name</p>
                                 </td>
+                                <td class="auto-style1">
+                                    <asp:TextBox ID="TextBox4" runat="server" Placeholder="Enter Your Last Name"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
+                                        ControlToValidate="TextBox4" ErrorMessage="Last Name is required" ForeColor="Red">*</asp:RequiredFieldValidator>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td>
-                                    <asp:TextBox ID="TextBox4" runat="server" Placeholder="Enter Your Last Name" required="required"></asp:TextBox>
+                                    <p>Gernder</p>
+                                </td>
+                                <td class="auto-style1">
+                                    <asp:CheckBoxList ID="CheckBoxList1" runat="server">
+                                        <asp:ListItem>Male</asp:ListItem>
+                                        <asp:ListItem>Female</asp:ListItem>
+                                    </asp:CheckBoxList>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <p>Email Id</p>
                                 </td>
-                                <td>
-                                    <asp:TextBox ID="TextBox5" runat="server" Placeholder="Enter Your Email Id" required="required"></asp:TextBox>
+                                <td class="auto-style1">
+                                    <asp:TextBox ID="TextBox5" TextMode="Email" runat="server" Placeholder="Enter Your Email Id"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
+                                        ControlToValidate="TextBox5" ErrorMessage="Email is required" ForeColor="Red">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <p>Contact</p>
                                 </td>
-                                <td>
-                                    <asp:TextBox ID="TextBox6" runat="server" Placeholder="Enter Your Contact Number" required="required"></asp:TextBox>
+                                <td class="auto-style1">
+                                    <asp:TextBox ID="TextBox6" runat="server" Placeholder="Enter Your Contact Number"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
+                                        ControlToValidate="TextBox6" ErrorMessage="Contact number is required" ForeColor="Red">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <p>Create Password</p>
                                 </td>
-                                <td>
-                                    <asp:TextBox ID="TextBox7" runat="server" Placeholder="Enter Your  Password" required="required"></asp:TextBox>
+                                <td class="auto-style1">
+                                    <asp:TextBox ID="TextBox7" runat="server" TextMode="Password" Placeholder="Enter Your Password"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server"
+                                        ControlToValidate="TextBox7" ErrorMessage="Password is required" ForeColor="Red">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <p>ReEnter Password</p>
                                 </td>
-                                <td>
-                                    <asp:TextBox ID="TextBox8" runat="server" Placeholder="ReEnter Your  Password" required="required"></asp:TextBox>
+                                <td class="auto-style1">
+                                    <asp:TextBox ID="TextBox8" runat="server" TextMode="Password" Placeholder="ReEnter Your Password"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server"
+                                        ControlToValidate="TextBox8" ErrorMessage="Please confirm your password" ForeColor="Red">*</asp:RequiredFieldValidator>
+                                    <asp:CompareValidator ID="CompareValidator1" runat="server"
+                                        ErrorMessage="Passwords do not match" ControlToCompare="TextBox7"
+                                        ControlToValidate="TextBox8" ForeColor="Red">*</asp:CompareValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <p>Address</p>
                                 </td>
-                                <td>
-                                    <asp:TextBox ID="TextBox9" TextMode="MultiLine" runat="server" Placeholder="Enter Your  Address" required="required"></asp:TextBox>
+                                <td class="auto-style1">
+                                    <asp:TextBox ID="TextBox9" TextMode="MultiLine" runat="server" Placeholder="Enter Your Address"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server"
+                                        ControlToValidate="TextBox9" ErrorMessage="Address is required" ForeColor="Red">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <p>State</p>
                                 </td>
-                                <td>
-                                    <asp:DropDownList ID="DropDownList1" runat="server">
+                                <td class="">
+                                    <asp:DropDownList ID="DropDownList1" runat="server" CssClass="custom-dropdown">
+                                        <asp:ListItem Value="Not Selected">Not Selected</asp:ListItem>
                                         <asp:ListItem>Andhra Pradesh</asp:ListItem>
                                         <asp:ListItem>Arunachal Pradesh</asp:ListItem>
                                         <asp:ListItem>Assam</asp:ListItem>
@@ -164,20 +200,30 @@
                                         <asp:ListItem>Uttarakhand</asp:ListItem>
                                         <asp:ListItem>West Bengal</asp:ListItem>
                                     </asp:DropDownList>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server"
+                                        ControlToValidate="DropDownList1" InitialValue="Not Selected" ErrorMessage="Please select a state" ForeColor="Red">*</asp:RequiredFieldValidator>
                                 </td>
                             </tr>
                         </table>
-                        
-                        <div class="check w3_agileits">
-                            <label class="checkbox w3">
-                               <asp:CheckBox ID="CheckBox2" runat="server" /><i> </i>I accept the terms and conditions</label>
-                        </div>
-                        <asp:Button ID="Button2" runat="server" Text="SignUp" />
-                        <asp:Button ID="Button3" runat="server" Text="Reset" />
-                        <asp:Button ID="Button4" runat="server" Text="login" />
 
-                        
-                    </div>
+                        <div class="check w3_agileits">
+                            
+                            <label class="checkbox w3">
+                                <asp:CheckBox ID="CheckBox2" runat="server" /><i> </i>I accept the terms and conditions</label>
+                           <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server"
+                                ControlToValidate="CheckBox2" InitialValue="false" ErrorMessage="You must accept the terms" ForeColor="Red">*</asp:RequiredFieldValidator>--%>
+                        </div>
+
+                        <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">SignUp</asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton5" runat="server" OnClick="LinkButton5_Click">Reset</asp:LinkButton>
+
+                        <div class="login_w3ls">
+        <a href="javascript:void(0);" onclick="switchTologin()" class="">Already have an account?</a>
+    </div>
+</div>
+
+                    <%--registration table endss--%>
+
                 </div>
             </div>
             <!-- //Horizontal Tab -->
@@ -226,6 +272,15 @@
                 //empty string means no validation error
             }
 
+        </script>
+        <script>
+            function switchToSignUp() {
+                document.getElementById("signup-tab").click();
+            }
+            function switchTologin() {
+                document.getElementById("login-tab").click();
+            }
+            
         </script>
         <!--//tabs-->
     </form>

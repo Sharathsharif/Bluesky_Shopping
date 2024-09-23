@@ -83,38 +83,104 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
-    <Content Include="Logins\Shop\css\easy-responsive-tabs.css" />
-    <Content Include="Logins\Shop\css\style.css" />
-    <Content Include="Logins\Shop\images\3.jpg" />
-    <Content Include="Logins\Shop\images\check.png" />
-    <Content Include="Logins\Shop\js\easyResponsiveTabs.js" />
-    <Content Include="Logins\Shop\js\jquery-1.6.3.min.js" />
-    <Content Include="Logins\Shop\js\jquery-1.9.1.min.js" />
-    <Content Include="Logins\User\css\easy-responsive-tabs.css" />
-    <Content Include="Logins\User\css\style.css" />
-    <Content Include="Logins\User\images\check.png" />
-    <Content Include="Logins\User\images\3.jpg" />
-    <Content Include="Logins\User\js\easyResponsiveTabs.js" />
-    <Content Include="Logins\User\js\jquery-1.6.3.min.js" />
-    <Content Include="Logins\User\js\jquery-1.9.1.min.js" />
-    <Content Include="Logins\User\UserLogin.aspx" />
+    <Content Include="Login\Contact.aspx" />
+    <Content Include="Login\images\BlueSky logo 4.png.svg" />
+    <Content Include="Login\css\font-awesome.min.css" />
+    <Content Include="Login\css\style.css" />
+    <Content Include="Login\fonts\fontawesome-webfont.svg" />
+    <Content Include="Login\images\bg.jpg" />
+    <Content Include="Login\ShopLogin.aspx" />
+    <Content Include="Login\ShopReg.aspx" />
+    <Content Include="Login\UserLogin.aspx" />
+    <Content Include="Login\userreg.aspx" />
+    <Content Include="obj\Debug\Bluesky_Shopping.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Bluesky_Shopping.dll" />
+    <Content Include="obj\Debug\Bluesky_Shopping.pdb" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Shoppers\Home_shop.aspx" />
+    <Content Include="Users\Home.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Logins\User\UserLogin.aspx.cs">
+    <Compile Include="Connect_Method.cs" />
+    <Compile Include="Disconnect_Method.cs" />
+    <Compile Include="Login\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Login.Master.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\Login.Master.designer.cs">
+      <DependentUpon>Login.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Login\ShopLogin.aspx.cs">
+      <DependentUpon>ShopLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\ShopLogin.aspx.designer.cs">
+      <DependentUpon>ShopLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\ShopReg.aspx.cs">
+      <DependentUpon>ShopReg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\ShopReg.aspx.designer.cs">
+      <DependentUpon>ShopReg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login\UserLogin.aspx.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Logins\User\UserLogin.aspx.designer.cs">
+    <Compile Include="Login\UserLogin.aspx.designer.cs">
       <DependentUpon>UserLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Login\userreg.aspx.cs">
+      <DependentUpon>userreg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login\userreg.aspx.designer.cs">
+      <DependentUpon>userreg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shoppers\Home_shop.aspx.cs">
+      <DependentUpon>Home_shop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shoppers\Home_shop.aspx.designer.cs">
+      <DependentUpon>Home_shop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shoppers\Shop_home.Master.cs">
+      <DependentUpon>Shop_home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shoppers\Shop_home.Master.designer.cs">
+      <DependentUpon>Shop_home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -133,6 +199,16 @@
     <Content Include="Content\bootstrap-grid.rtl.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Login\Login.Master" />
+    <Content Include="Login\fonts\fontawesome-webfont.eot" />
+    <Content Include="Login\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Login\fonts\fontawesome-webfont.woff" />
+    <Content Include="Login\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Login\fonts\FontAwesome.otf" />
+    <Content Include="obj\Debug\Bluesky_Shopping.csproj.AssemblyReference.cache" />
+    <Content Include="obj\Debug\Bluesky_Shopping.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="packages.config" />
     <Content Include="Scripts\bootstrap.min.js.map" />
     <Content Include="Scripts\bootstrap.js.map" />
@@ -140,6 +216,8 @@
     <Content Include="Scripts\bootstrap.esm.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Users\Home.Master" />
+    <Content Include="Shoppers\Shop_home.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -149,8 +227,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\" />
-    <Folder Include="Shoppers\" />
-    <Folder Include="Users\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

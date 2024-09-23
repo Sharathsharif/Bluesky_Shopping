@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Login.Master.cs" Inherits="Bluesky_Shopping.Login.Site1" %>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="zxx">
+<!-- Head -->
+
+<head>
+    <title>Key Login Form Flat Responsive Widget Template :: W3layouts</title>
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Key Login Form a Responsive Web Template, Bootstrap Web Templates, Flat Web Templates, Android Compatible Web Template, Smartphone Compatible Web Template, Free Webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta-Tags -->
+    <!-- Index-Page-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <!-- //Custom-Stylesheet-Links -->
+    <!--fonts -->
+    <!-- //fonts -->
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all">
+    <!-- //Font-Awesome-File-Links -->
+
+    <!-- Google fonts -->
+    <link href="//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800" rel="stylesheet">
+    <!-- Google fonts -->
+
+
+
+</head>
+<!-- //Head -->
+<!-- Body -->
+
+<body>
+
+    <section class="main">
+        <div class="layer">
+
+            <div class="bottom-grid">
+                <div class="logo">
+                    <a href="UserLogin.aspx"><span>
+                        <asp:Image ID="Image1" runat="server" ImageUrl="~/Login/images/BlueSky logo 4.png.svg" /><asp:Image ID="Image2" runat="server" />
+                    </span></a>
+                </div>
+                <div class="links">
+                    <ul class="links-unordered-list">
+                        <li id="userLoginLink" runat="server">
+                            <a href="UserLogin.aspx" class="">User Login</a>
+                        </li>
+                        <li id="shopLoginLink" runat="server">
+                            <a href="ShopLogin.aspx" class="">Shop Login</a>
+                        </li>
+                        <li id="contactLink" runat="server">
+                            <a href="Contact.aspx" class="">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <form runat="server">
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </form>
+
+
+            <div class="bottom-grid1">
+                <div class="links">
+                    <ul class="links-unordered-list">
+                        <li class="">
+                            <a href="Contact.aspx" class="">About Us</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="">Privacy Policy</a>
+                        </li>
+                        <li class="">
+                            <a href="#" class="">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="copyright">
+                    <p>
+                        © 2024 Blue Sky Shopping. All rights reserved | Design by
+					<a href="#">Sharath</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+<!-- //Body -->
+</html>
+
+
