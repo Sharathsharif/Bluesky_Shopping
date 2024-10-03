@@ -310,9 +310,9 @@ body {
 }
 
 ul.links-unordered-list li.active a {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.05); /* Active background */
     padding: 5px 20px;
-    color: #fff;
+    color: #fff; /* Active text color */
 }
 
 .icon span.fa {
@@ -509,7 +509,10 @@ ul.links-unordered-list li {
 
     ul.links-unordered-list li a {
         font-size: 16px;
-        color: #ccc;
+        color: white;
+        background-color: black;
+        border-radius: 20px;
+        padding: 20px;
         font-weight: normal;
         letter-spacing: 1px;
         padding: 0 5px;
@@ -577,7 +580,7 @@ label.switch {
     font-size: 15px;
     letter-spacing: 1px;
     font-weight: 300;
-    color: #ccc !important;
+    
     text-transform: capitalize;
 }
 
@@ -587,6 +590,7 @@ ul.list-login-bottom li:nth-child(1) a, ul.list-login-bottom li:nth-child(2) a {
     font-weight: normal;
     text-transform: uppercase;
     color: #fff !important;
+    background-color:aqua;
 }
 
 li:nth-child(2) a, li:nth-child(1) a {

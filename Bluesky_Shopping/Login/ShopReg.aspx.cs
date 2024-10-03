@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -20,20 +21,19 @@ namespace Bluesky_Shopping.Login
 
         protected void ButtonRegister_Click(object sender, EventArgs e)
         {
-            string ac="";
-            string ap="";
-            string shopname=TextBox1.Text;
+
+            string shopname = TextBox1.Text;
             string shopmail = TextBox2.Text;
             string Contact = TextBox3.Text;
             string Address = TextBox4.Text;
             string category = DropDownCategory.Text;
             string Name = TextBox5.Text;
-            string PersoanalEmail = RadioButtonListGender.Text;
-            string Gender = TextBox7.Text;
+            string PersoanalEmail = TextBox6.Text;
+            string Gender = RadioButtonListGender.Text;
             string dob = TextBox7.Text;
             string pwd = TextBox8.Text;
 
-            string cmd = "select * from shop_reg where Mail='" + shopmail + "'";
+            string cmd = "select * from shop_reg where Shop_Mail='" + shopmail + "'";
             ds = dm.Disconnect_FN(cmd);
             if (ds.Tables[0].Rows.Count > 0)
             {
@@ -42,14 +42,28 @@ namespace Bluesky_Shopping.Login
             }
             if (ds.Tables[0].Rows.Count == 0)
             {
-                string cmd2 = "exec shopreg'" + ac + "','" + ap + "','" + shopname + "','" + shopmail + "','" + Contact + "','" + Address + "','" + category + "','" + Name + "','" + PersoanalEmail + "','" + Gender + "','" + dob + "','" + pwd + "' ";
+                string cmd2 = "exec shopreg'" + shopname + "','" + shopmail + "','" + Contact + "','" + Address + "','" + category + "','" + Name + "','" + PersoanalEmail + "','" + Gender + "','" + dob + "','" + pwd + "' ";
                 dm.Disconnect_FN(cmd2);
+                createuserfolder(shopmail);
+
                 Response.Redirect("ShopLogin.aspx");
                 ClientScript.RegisterStartupScript(GetType(), "", "<script>alert(' Registered Successfull')</script>");
 
 
             }
 
+        }
+        private void createuserfolder( string foldername)
+        {
+            //to Locate the path
+            string imgfolderpath = Server.MapPath("~/ProductImg/" + foldername);
+
+            // Check if the folder already exists
+            if (!Directory.Exists(imgfolderpath))
+            {
+                // to create the folder
+                Directory.CreateDirectory(imgfolderpath);
+            }
         }
     }
 }

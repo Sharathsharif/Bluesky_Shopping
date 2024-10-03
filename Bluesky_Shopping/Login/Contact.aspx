@@ -3,6 +3,7 @@
      <div class="content-w3ls">
     <h1 style="color:whitesmoke; font-size:xx-large">About Us :</h1>
          <div class="group">
+             <br />
             <h1 style="color:whitesmoke">
                 At Blue Sky Shopping, we are committed to revolutionizing your online shopping experience. Founded with the vision of bringing a diverse range of quality products to your fingertips, we strive to provide our customers with an extensive selection of items at competitive prices. Our user-friendly platform is designed to make browsing and purchasing as seamless as possible, whether you’re on your computer or mobile device. With secure payment options and prompt delivery services, we ensure that shopping with us is not only convenient but also safe.
 

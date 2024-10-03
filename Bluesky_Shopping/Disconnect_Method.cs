@@ -13,11 +13,29 @@ namespace Bluesky_Shopping
         SqlDataAdapter adp;
         DataSet ds = new DataSet();
 
-        public DataSet Disconnect_FN( string a)
+        public DataSet Disconnect_FN(string a)
         {
-            adp = new SqlDataAdapter(a , con);
+            adp = new SqlDataAdapter(a, con);
             adp.Fill(ds);
             return ds;
+        }
+
+        public string insert(string a)
+        {
+            try
+            {
+            adp = new SqlDataAdapter(a, con);
+            adp.Fill(ds);
+            string result= "true";
+            return result;
+
+            }
+            catch (Exception er)
+            {
+                string result = "false";
+                return result;
+                
+            }
         }
     }
 }

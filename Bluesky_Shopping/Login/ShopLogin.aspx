@@ -29,7 +29,7 @@
 					<br />
 					<ul class="list-login-bottom">
 						<li class="">
-							<a href="ShopReg.aspx" class="">Create Account</a>
+							<a href="ShopReg.aspx" class="" style="color:red !important;" >Create Account</a>
 						</li>
 						
 						<li class="clearfix"></li>

@@ -13,5 +13,13 @@ namespace Bluesky_Shopping.Shoppers
         {
 
         }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            string script = "alert('Logout Successful'); window.location.href='../Login/ShopLogin.aspx';";
+            ScriptManager.RegisterStartupScript(this, GetType(), "LogoutScript", script, true);
+
+        }
     }
 }

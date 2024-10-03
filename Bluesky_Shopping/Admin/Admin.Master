@@ -1,0 +1,276 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Bluesky_Shopping.Admin.Admin" %>
+
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>BlueSky Shopping-Admin </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link href="../../Content/bootstrap.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+
+    <link href="css/login_overlay.css" rel='stylesheet' type='text/css' />
+    <link href="css/style6.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="css/shop.css" type="text/css" />
+    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/owl.theme.css" type="text/css" media="all">
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800"
+        rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+</head>
+
+<body>
+    <form runat="server">
+
+     
+
+        <div class="banner-top container-fluid" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light top-header mb-2" style="position: sticky; top: 0; z-index: 1000; background-color: white;">
+                <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Users/images/BlueSky logo 4.png.svg" Height="60px" Width="150px"  />
+                <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-mega mx-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link ml-lg-0" href="Home.aspx">Home
+								<span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="Allsellerlist.aspx" >Seller
+    </a>
+                            
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Users.aspx">Users</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="Product_List.aspx">Product list</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="furnitureDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Image Upload
+    </a>
+                            <div class="dropdown-menu dropdown-menu6" style="left: 45%; transform: translateX(-50%); right: auto;" aria-labelledby="CategoryDropdown">
+                                <a class="dropdown-item" href="Home_Img.aspx">Home</a>
+                                <a class="dropdown-item" href="Mobiles.aspx">Mobiles & Tablets</a>
+                                <a class="dropdown-item" href="tables.aspx">TV & Applicances</a>
+                                <a class="dropdown-item" href="beds.aspx">Electronics</a>
+                                <a class="dropdown-item" href="sofas.aspx">Fashion</a>
+                                <a class="dropdown-item" href="sofas.aspx">Beauty</a>
+                                <a class="dropdown-item" href="sofas.aspx">Home & Kitchen</a>
+                                <a class="dropdown-item" href="sofas.aspx">Furniture</a>
+
+
+                            </div>
+                        </li>
+                        <li class="nav-item" style="margin-top:1%" >
+                            <asp:TextBox ID="TextBox1" runat="server" CssClass="fa "></asp:TextBox>
+                            <asp:LinkButton ID="LinkButton6" runat="server" CssClass="fa fa-search"></asp:LinkButton>
+                            
+                        </li>
+                    </ul>
+
+                </div>
+                <div>
+                    <asp:Label ID="Label1" runat="server" class="dropdown-item  " Text="Admin"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" Text="" Visible="false"></asp:Label>
+                </div>
+                <div>
+                                <asp:LinkButton ID="LinkButton1" runat="server" class="dropdown-item  "   OnClick="LinkButton1_Click">Logout</asp:LinkButton>
+
+                </div>
+               
+                
+            </nav>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        </div>
+
+
+
+
+
+    </form>
+
+
+
+
+
+
+
+    <!-- jQuery (Keep the latest version, remove the older one) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Modal Script -->
+<script>
+    $(document).ready(function () {
+        $("#myModal").modal();
+    });
+</script>
+
+<!-- Search jQuery -->
+<script src="js/modernizr-2.6.2.min.js"></script>
+<script src="js/classie-search.js"></script>
+<script src="js/demo1-search.js"></script>
+    <link href="css/flexslider.css" rel="stylesheet" />
+
+<!-- Remove the extra jQuery -->
+<!-- Removed js/jquery-2.2.3.min.js -->
+
+<!-- Cart JS -->
+<script src="js/minicart.js"></script>
+<script>
+    googles.render();
+    googles.cart.on('googles_checkout', function (evt) {
+        var items, len, i;
+
+        if (this.subtotal() > 0) {
+            items = this.items();
+            for (i = 0, len = items.length; i < len; i++) { }
+        }
+    });
+</script>
+
+<!-- Price Range (Top Products) -->
+<script src="js/jquery-ui.js"></script>
+<script>
+    $(window).load(function () {
+        $("#slider-range").slider({
+            range: true,
+            min: 0,
+            max: 9000,
+            values: [50, 6000],
+            slide: function (event, ui) {
+                $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+            }
+        });
+        $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
+    });
+</script>
+
+<!-- Overlay Login Toggle -->
+<script>
+    $(document).ready(function () {
+        $(".button-log a").click(function () {
+            $(".overlay-login").fadeToggle(200);
+            $(this).toggleClass('btn-open').toggleClass('btn-close');
+        });
+    });
+    $('.overlay-close1').on('click', function () {
+        $(".overlay-login").fadeToggle(200);
+        $(".button-log a").toggleClass('btn-open').toggleClass('btn-close');
+        open = false;
+    });
+</script>
+
+<!-- Count-down -->
+<script src="js/simplyCountdown.js"></script>
+<link href="css/simplyCountdown.css" rel='stylesheet' type='text/css' />
+<script>
+    var d = new Date();
+    simplyCountdown('simply-countdown-custom', {
+        year: d.getFullYear(),
+        month: d.getMonth() + 2,
+        day: 25
+    });
+</script>
+
+<!-- Owl Carousel -->
+<script src="js/owl.carousel.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 2,
+                    nav: false
+                },
+                900: {
+                    items: 3,
+                    nav: false
+                },
+                1000: {
+                    items: 4,
+                    nav: true,
+                    loop: false,
+                    margin: 20
+                }
+            }
+        });
+    });
+</script>
+
+<!-- Bootstrap Dropdown Functionality -->
+<script>
+    $(document).ready(function () {
+        // Bootstrap dropdown function will handle this automatically
+        // Add 'dropdown-toggle' class to trigger dropdown functionality
+
+        // Optional: Close dropdown when clicked outside (Bootstrap already does this)
+        $(document).on('click', function (e) {
+            if (!$('.dropdown').is(e.target) && $('.dropdown').has(e.target).length === 0 && $('.show').length) {
+                $('.dropdown-toggle').dropdown('hide');  // Hide open dropdown
+            }
+        });
+    });
+</script>
+
+<!-- Smooth Scrolling -->
+<script src="js/move-top.js"></script>
+<script src="js/easing.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 900);
+        });
+    });
+</script>
+
+<!-- Scroll to Top -->
+<script>
+    $(document).ready(function () {
+        $().UItoTop({
+            easingType: 'easeOutQuart'
+        });
+    });
+</script>
+
+<!-- Bootstrap JS -->
+<script src="js/bootstrap.js"></script>
+
+</body>
+
+</html>
+

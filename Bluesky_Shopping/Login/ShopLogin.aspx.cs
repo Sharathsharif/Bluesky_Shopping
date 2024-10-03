@@ -24,16 +24,39 @@ namespace Bluesky_Shopping.Login
             string pwd = TextBox2.Text;
             string cmd = "select * from shop_reg where Shop_Mail='" + mail + "'and Password='" + pwd + "'  ";
             ds = dm.Disconnect_FN(cmd);
-            if (ds.Tables[0].Rows.Count == 1)
+            if (ds.Tables[0].Rows[0][1].ToString() == "Admin")
             {
                 string currentuser = ds.Tables[0].Rows[0][4].ToString();
                 Session["CurrentUser"] = currentuser;
-                Response.Redirect("~/Shoppers/Home_shop.aspx");
-                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('Login successfull')</script>");
+                Response.Redirect("~/Admin/Home.aspx");
+                ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('Welcome Admin')</script>");
+
             }
             else
             {
-                string cmd2 = "select * from shop_reg where Mail='" + TextBox1.Text + "'  ";
+
+            if (ds.Tables[0].Rows.Count == 1)
+            {
+                string User = ds.Tables[0].Rows[0][1].ToString();
+                string approval = ds.Tables[0].Rows[0][2].ToString();
+                if (approval == "Approved")
+                {
+                    string currentuser = ds.Tables[0].Rows[0][4].ToString();
+                    Session["CurrentUser"] = currentuser;
+                    Response.Redirect("~/Shoppers/Home_shop.aspx");
+                    ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('Login successfull')</script>");
+
+                }
+
+                else
+                {
+                    ClientScript.RegisterStartupScript(GetType(), "", "<script>alert('Your not account Approved Yet')</script>");
+
+                }
+            }
+            else
+            {
+                string cmd2 = "select * from shop_reg where Shop_Mail='" + TextBox1.Text + "'  ";
                 ds = dm.Disconnect_FN(cmd2);
                 if (ds.Tables[0].Rows.Count == 1)
                 {
@@ -46,6 +69,7 @@ namespace Bluesky_Shopping.Login
                     ClientScript.RegisterStartupScript(GetType(), "", "<script>alert(' Email id you entered is Not registered with us!! Please Register!!!')</script>");
                 }
 
+            }
             }
         }
     }

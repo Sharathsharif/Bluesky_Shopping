@@ -67,6 +67,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Allsellerlist.aspx" />
+    <Content Include="Admin\Home.aspx" />
+    <Content Include="Admin\Home_Img.aspx" />
+    <Content Include="Admin\Product_List.aspx" />
+    <Content Include="Admin\Users.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -83,6 +88,9 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Errors\loginagain.aspx" />
+    <Content Include="Images\Home_Section\Furniture.jpg" />
+    <Content Include="Images\Home_Section\Mobiles&amp;Tablets.jpg" />
     <Content Include="Login\Contact.aspx" />
     <Content Include="Login\images\BlueSky logo 4.png.svg" />
     <Content Include="Login\css\font-awesome.min.css" />
@@ -102,13 +110,148 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Admin\Admin.Master" />
+    <None Include="Scripts\jquery-3.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.1.js" />
+    <Content Include="Scripts\jquery-3.7.1.min.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
+    <Content Include="Shoppers\ContactUs.aspx" />
     <Content Include="Shoppers\Home_shop.aspx" />
+    <Content Include="Shoppers\Sell_Product.aspx" />
+    <Content Include="Users\css\bootstrap.css" />
+    <Content Include="Users\css\checkout.css" />
+    <Content Include="Users\css\contact.css" />
+    <Content Include="Users\css\creditly.css" />
+    <Content Include="Users\css\easy-responsive-tabs.css" />
+    <Content Include="Users\css\flexslider.css" />
+    <Content Include="Users\css\fontawesome-all.css" />
+    <Content Include="Users\css\jquery-ui1.css" />
+    <Content Include="Users\css\login_overlay.css" />
+    <Content Include="Users\css\owl.carousel.css" />
+    <Content Include="Users\css\owl.theme.css" />
+    <Content Include="Users\css\shop.css" />
+    <Content Include="Users\css\simplyCountdown.css" />
+    <Content Include="Users\css\style.css" />
+    <Content Include="Users\css\style6.css" />
+    <Content Include="Users\demo.aspx" />
     <Content Include="Users\Home.aspx" />
+    <Content Include="Users\images\banner-mid.jpg" />
+    <Content Include="Users\images\banner1.jpg" />
+    <Content Include="Users\images\banner2.jpg" />
+    <Content Include="Users\images\banner3.jpg" />
+    <Content Include="Users\images\banner4.jpg" />
+    <Content Include="Users\images\BlueSky logo 4.png.svg" />
+    <Content Include="Users\images\close.png" />
+    <Content Include="Users\images\close_1.jpg" />
+    <Content Include="Users\images\d1.jpg" />
+    <Content Include="Users\images\d2.jpg" />
+    <Content Include="Users\images\d3.jpg" />
+    <Content Include="Users\images\g1.jpg" />
+    <Content Include="Users\images\g2.jpg" />
+    <Content Include="Users\images\g3.jpg" />
+    <Content Include="Users\images\g4.jpg" />
+    <Content Include="Users\images\left.png" />
+    <Content Include="Users\images\m1.jpg" />
+    <Content Include="Users\images\m2.jpg" />
+    <Content Include="Users\images\m3.jpg" />
+    <Content Include="Users\images\m4.jpg" />
+    <Content Include="Users\images\paypal.png" />
+    <Content Include="Users\images\right.png" />
+    <Content Include="Users\images\s1.jpg" />
+    <Content Include="Users\images\s10.jpeg" />
+    <Content Include="Users\images\s10.jpg" />
+    <Content Include="Users\images\s2.jpg" />
+    <Content Include="Users\images\s3.jpg" />
+    <Content Include="Users\images\s4.jpg" />
+    <Content Include="Users\images\s5.jpg" />
+    <Content Include="Users\images\s6.jpg" />
+    <Content Include="Users\images\s7.jpg" />
+    <Content Include="Users\images\s8.jpg" />
+    <Content Include="Users\images\s9.jpg" />
+    <Content Include="Users\images\search.png" />
+    <Content Include="Users\images\team1.jpg" />
+    <Content Include="Users\images\team2.jpg" />
+    <Content Include="Users\images\team3.jpg" />
+    <Content Include="Users\images\team4.jpg" />
+    <Content Include="Users\images\up_arrow.png" />
+    <Content Include="Users\js\bootstrap.js" />
+    <Content Include="Users\js\classie-search.js" />
+    <Content Include="Users\js\creditly.js" />
+    <Content Include="Users\js\demo1-search.js" />
+    <Content Include="Users\js\easing.js" />
+    <Content Include="Users\js\easy-responsive-tabs.js" />
+    <Content Include="Users\js\imagezoom.js" />
+    <Content Include="Users\js\jquery-2.2.3.min.js" />
+    <Content Include="Users\js\jquery-ui.js" />
+    <Content Include="Users\js\jquery.easing.min.js" />
+    <Content Include="Users\js\jquery.flexslider.js" />
+    <Content Include="Users\js\jquery.magnific-popup.js" />
+    <Content Include="Users\js\minicart.js" />
+    <Content Include="Users\js\modernizr-2.6.2.min.js" />
+    <Content Include="Users\js\move-top.js" />
+    <Content Include="Users\js\owl.carousel.js" />
+    <Content Include="Users\js\simplyCountdown.js" />
+    <Content Include="Users\Mobiles.aspx" />
+    <Content Include="Users\Profile.aspx" />
+    <Content Include="Users\Single_Product_View.aspx" />
+    <Content Include="Users\webfonts\fa-brands-400.svg" />
+    <Content Include="Users\webfonts\fa-regular-400.svg" />
+    <Content Include="Users\webfonts\fa-solid-900.svg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Allsellerlist.aspx.cs">
+      <DependentUpon>Allsellerlist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Allsellerlist.aspx.designer.cs">
+      <DependentUpon>Allsellerlist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Home_Img.aspx.cs">
+      <DependentUpon>Home_Img.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Home_Img.aspx.designer.cs">
+      <DependentUpon>Home_Img.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product_List.aspx.cs">
+      <DependentUpon>Product_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product_List.aspx.designer.cs">
+      <DependentUpon>Product_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Connect_Method.cs" />
     <Compile Include="Disconnect_Method.cs" />
+    <Compile Include="Errors\loginagain.aspx.cs">
+      <DependentUpon>loginagain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Errors\loginagain.aspx.designer.cs">
+      <DependentUpon>loginagain.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -153,12 +296,26 @@
     </Compile>
     <Compile Include="obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shoppers\ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shoppers\ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Shoppers\Home_shop.aspx.cs">
       <DependentUpon>Home_shop.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Shoppers\Home_shop.aspx.designer.cs">
       <DependentUpon>Home_shop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shoppers\Sell_Product.aspx.cs">
+      <DependentUpon>Sell_Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shoppers\Sell_Product.aspx.designer.cs">
+      <DependentUpon>Sell_Product.aspx</DependentUpon>
     </Compile>
     <Compile Include="Shoppers\Shop_home.Master.cs">
       <DependentUpon>Shop_home.Master</DependentUpon>
@@ -167,6 +324,13 @@
     <Compile Include="Shoppers\Shop_home.Master.designer.cs">
       <DependentUpon>Shop_home.Master</DependentUpon>
     </Compile>
+    <Compile Include="Users\demo.aspx.cs">
+      <DependentUpon>demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\demo.aspx.designer.cs">
+      <DependentUpon>demo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Users\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -174,12 +338,40 @@
     <Compile Include="Users\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Users\Home.Master.cs">
-      <DependentUpon>Home.Master</DependentUpon>
+    <Compile Include="Users\Index_Users.Master.cs">
+      <DependentUpon>Index_Users.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Users\Home.Master.designer.cs">
-      <DependentUpon>Home.Master</DependentUpon>
+    <Compile Include="Users\Index_Users.Master.designer.cs">
+      <DependentUpon>Index_Users.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Mobiles.aspx.cs">
+      <DependentUpon>Mobiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Mobiles.aspx.designer.cs">
+      <DependentUpon>Mobiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Single_Product_View.aspx.cs">
+      <DependentUpon>Single_Product_View.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Single_Product_View.aspx.designer.cs">
+      <DependentUpon>Single_Product_View.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -216,8 +408,23 @@
     <Content Include="Scripts\bootstrap.esm.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Users\Home.Master" />
     <Content Include="Shoppers\Shop_home.Master" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.1.min.map" />
+    <Content Include="Users\webfonts\fa-brands-400.eot" />
+    <Content Include="Users\webfonts\fa-brands-400.ttf" />
+    <Content Include="Users\webfonts\fa-brands-400.woff" />
+    <Content Include="Users\webfonts\fa-brands-400.woff2" />
+    <Content Include="Users\webfonts\fa-regular-400.eot" />
+    <Content Include="Users\webfonts\fa-regular-400.ttf" />
+    <Content Include="Users\webfonts\fa-regular-400.woff" />
+    <Content Include="Users\webfonts\fa-regular-400.woff2" />
+    <Content Include="Users\webfonts\fa-solid-900.eot" />
+    <Content Include="Users\webfonts\fa-solid-900.ttf" />
+    <Content Include="Users\webfonts\fa-solid-900.woff" />
+    <Content Include="Users\webfonts\fa-solid-900.woff2" />
+    <Content Include="Users\Index_Users.Master" />
+    <Content Include="Users\Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -226,8 +433,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\" />
     <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="ProductImg\ss%40gmail.com\" />
+    <Folder Include="Shoppers\css\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
